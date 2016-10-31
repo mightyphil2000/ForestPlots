@@ -1,8 +1,9 @@
 Package: ForestPlots
 Title: Generate forest plots using results from MR-Base
 Version: 0.0.0.9000
-Authors@R: person("Charles", "Laurin", email = "charles.laurin@bristol.ac.uk", role = c("aut", "cre")),
-	person("Philip","Haycock",email="philip.haycock@bristol.ac.uk",role=c("aut","cre"))
+Authors@R: c(person("Charles", "Laurin", email = "charles.laurin@bristol.ac.uk", role = c("aut", "cre")),
+	person("Philip","Haycock",email="philip.haycock@bristol.ac.uk",role=c("aut","cre")))
+
 Description: See title 
 Depends: R (>= 3.3.0)
 License: Artistic-2.0
