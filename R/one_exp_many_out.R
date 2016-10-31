@@ -1,7 +1,7 @@
 
 
 ##### Begin one_exp_many_out()
-one_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", exposure_Name="snps.test", outcome_Name="effect.estimate",forest_Title = 'Effect', outfile_Name = 'annot_FP.pdf', left_Col_Names=c("outcome", "snps.test", "chr.names"), left_Col_Titles = c("Outcome", "SNP", "Chr"), right_Col_Names = NULL, right_Col_Titles = NULL, log_ES = FALSE, exp_ES = FALSE, se_Col = "se.outcome", ub_Col =  NULL, lb_Col = NULL, summary_List = c("Inverse variance weighted"), weight = TRUE,sort_at_All=F) {
+one_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", exposure_Name="snps.test", outcome_Name="effect.estimate",forest_Title = 'Effect', outfile_Name = 'annot_FP.pdf', left_Col_Names=c("outcome", "snps.test", "chr.names"), left_Col_Titles = c("Outcome", "SNP", "Chr"), right_Col_Names = NULL, right_Col_Titles = NULL, log_ES = FALSE, exp_ES = FALSE, se_Col = "se.outcome", ub_Col =  NULL, lb_Col = NULL, summary_List = c("Inverse variance weighted"), weight = TRUE, sort_at_All = TRUE, N_Breaks = 3) {
   
   library(grid)
   library(ggplot2)
@@ -9,7 +9,7 @@ one_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", expos
   library(reshape2)
   library(scales)
   
-  source("~/Google Drive/MR_base/MR_base_webapp/R/charles_forest_plots/forest_plots_helper_functions.R")
+  source("./forest_plots_helper_functions.R")
   # inpt_Df = (character) filename of the data
   # eff_Col = (character) character giving the MR effect column
   # exposure_Name = (character) name of the SNP Name/Summary Name column
@@ -48,13 +48,13 @@ one_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", expos
   ## inpt_Df[,"orci"] <- paste0(" (", signif(inpt_Df[,lb_Col],3),", ", signif(inpt_Df[,ub_Col],3), ")")
   
   #
-  space1 <- spacer( major = outcome_Name, sort_var = eff_Col, data_Fm = inpt_Df,sort_at_all=sort_at_All)
+  space1 <- spacer( major = outcome_Name, sort_var = eff_Col, data_Fm = inpt_Df, sort_at_all = sort_at_All)
   
   expand_data  <- space_Out(data_Fm = inpt_Df, space_Fm = space1)
   
   
   ## Make the forest plot
-  fo1  <- makeforest( data_Fm = expand_data, eff_col = eff_Col, lb_col = lb_Col, ub_col = ub_Col, log_ES = log_ES, title_text = forest_Title, exp_ES = exp_ES, se_col = se_Col, se_Weight = weight,colour_col="colour_col")
+  fo1  <- makeforest( data_Fm = expand_data, eff_col = eff_Col, lb_col = lb_Col, ub_col = ub_Col, log_ES = log_ES, title_text = forest_Title, exp_ES = exp_ES, se_col = se_Col, se_Weight = weight, n_Breaks = N_Breaks)
   
   ## Construct left-hand-side annotations
   left <- anot_side( data_Fm = expand_data, col_names = left_Col_Names, title_list = left_Col_Titles, notitles = FALSE, content_Name = outcome_Name)
