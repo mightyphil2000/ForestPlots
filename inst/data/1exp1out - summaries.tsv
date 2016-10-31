@@ -1,0 +1,5 @@
+id.outcome	exposure	outcome	id.exposure	samplesize	SNP	b	se	pval	method	nsnp	Q	Q_df	Q_pval	cat	ncase	ncontrol	pmid	subcat	trait_strict
+44	BMI	coronary artery disease || Cardiogramplusc4d || 2013	n9Sgm0	NA	NA	0.369564607	0.080363878	6.77E-06	Inverse variance weighted	93	126.0252583	92	0.010717353	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	BMI	coronary artery disease || Cardiogramplusc4d || 2013	n9Sgm0	NA	NA	0.364770241	0.058143165	5.68E-09	Maximum likelihood	93	126.6054604	92	0.00977331	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	BMI	coronary artery disease || Cardiogramplusc4d || 2013	n9Sgm0	NA	NA	0.232507046	0.144820888	0.111853093	MR Egger	93	126.0329444	91	0.008872644	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	BMI	coronary artery disease || Cardiogramplusc4d || 2013	n9Sgm0	NA	NA	0.365552283	0.049897804	4.43E-11	Weighted median	93	NA	NA	NA	disease	63746	130681	23202125	cardiovascular	coronary artery disease

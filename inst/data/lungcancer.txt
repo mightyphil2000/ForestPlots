@@ -1,0 +1,121 @@
+Phenotype	SNPs	Beta	SE	Pvalue	subtype	method
+weight 	11	-0.074129113	0.172036896	0.666547783	adenocarcinoma	IVW
+weight 	11	0.50209879	0.305819146	0.100628127	small cell carcinoma	IVW
+weight 	11	0.148861161	0.236203817	0.528548464	squamous cell carcinoma	IVW
+waist-to-hip ratio	35	-0.108430498	0.138448675	0.433520298	adenocarcinoma	IVW
+waist-to-hip ratio	35	0.3571523	0.230521332	0.121303782	small cell carcinoma	IVW
+waist circumference	45	0.053310036	0.13324229	0.689083991	adenocarcinoma	IVW
+waist circumference	45	0.405970908	0.236686628	0.086303916	small cell carcinoma	IVW
+waist circumference	45	0.298663935	0.185228725	0.106873587	squamous cell carcinoma	IVW
+Vitamin E 	3	-0.067447376	0.14605184	0.644221629	adenocarcinoma	IVW
+Vitamin E 	3	-0.218790547	0.239921207	0.361807322	small cell carcinoma	IVW
+Vitamin E 	3	0.196348734	0.157221665	0.211714222	squamous cell carcinoma	IVW
+Vitamin D 	3	0.952158618	0.737786544	0.19685591	adenocarcinoma	IVW
+Vitamin D 	3	-2.112315963	1.322824349	0.110305232	small cell carcinoma	IVW
+Vitamin D 	3	-0.456417938	0.910661306	0.616234631	squamous cell carcinoma	IVW
+Vitamin B6	1	-0.017014743	0.089565517	0.849332803	adenocarcinoma	IVW
+Vitamin B6	1	0.117419725	0.162912414	0.471061067	small cell carcinoma	IVW
+Vitamin B6	1	-0.037554648	0.104234897	0.718631302	squamous cell carcinoma	IVW
+Vitamin B12 	3	0.044548105	0.181006128	0.805594146	adenocarcinoma	IVW
+Vitamin B12 	3	0.160351679	0.207392379	0.439415748	small cell carcinoma	IVW
+Vitamin B12 	3	0.018546337	0.179396914	0.917660126	squamous cell carcinoma	IVW
+tryptophan	18	0.015407138	0.049561109	0.755898281	adenocarcinoma	IVW
+tryptophan	18	-0.024743025	0.088860667	0.780668905	small cell carcinoma	IVW
+tryptophan	18	0.081847837	0.062176851	0.188049371	squamous cell carcinoma	IVW
+Total cholesterol	117	-0.018752644	0.043515005	0.666507183	adenocarcinoma	IVW
+Total cholesterol	116	-0.162697783	0.076911345	0.034396397	small cell carcinoma	IVW
+Total cholesterol	117	-0.118286466	0.05127015	0.021048047	squamous cell carcinoma	IVW
+Tot.FA	12	0.001346056	0.054818076	0.980409939	adenocarcinoma	IVW
+Tot.FA	12	-0.068435142	0.142213816	0.630365099	small cell carcinoma	IVW
+Tot.FA	12	-0.079144338	0.082006019	0.334492717	squamous cell carcinoma	IVW
+Thyroid function 	19	0.096121916	0.091616773	0.29409814	adenocarcinoma	IVW
+Thyroid function 	19	0.229110943	0.095787319	0.016762717	small cell carcinoma	IVW
+Thyroid function 	19	0.024013521	0.07495266	0.748678384	squamous cell carcinoma	IVW
+Telomere length	3	1.042600797	0.317726064	0.001032764	adenocarcinoma	IVW
+Telomere length	3	0.235109196	0.27833148	0.398273153	small cell carcinoma	IVW
+Telomere length	3	-0.172723506	0.177790219	0.33129849	squamous cell carcinoma	IVW
+Smoking	3	2.356907321	0.477385821	7.92879e-07	adenocarcinoma	IVW
+Smoking	3	2.749314467	0.554697096	7.18021e-07	small cell carcinoma	IVW
+Smoking	3	2.476996849	0.511239385	1.26559e-06	squamous cell carcinoma	IVW
+Selenium 	1	-0.081628484	0.101549488	0.421495393	adenocarcinoma	IVW
+Selenium 	1	-0.044911195	0.182491222	0.805604377	small cell carcinoma	IVW
+Selenium 	1	-0.010361562	0.116825702	0.929326305	squamous cell carcinoma	IVW
+Schizophrenia 	88	0.075169413	0.042785145	0.07893409	adenocarcinoma	IVW
+Schizophrenia 	86	0.050658253	0.065560909	0.439705914	small cell carcinoma	IVW
+Schizophrenia 	88	0.083390041	0.051323745	0.10420842	squamous cell carcinoma	IVW
+Retinol 	2	0.084135754	0.12208765	0.490733775	adenocarcinoma	IVW
+Retinol 	2	0.282505114	0.155768088	0.069735265	small cell carcinoma	IVW
+Retinol 	2	0.059210238	0.17621162	0.736857455	squamous cell carcinoma	IVW
+PUFA	18	0.053921852	0.035150158	0.125019094	adenocarcinoma	IVW
+PUFA	17	0.040750469	0.061634548	0.508507932	small cell carcinoma	IVW
+PUFA	18	0.074869129	0.04002761	0.061423137	squamous cell carcinoma	IVW
+MUFA	7	0.039981702	0.070434174	0.570275122	adenocarcinoma	IVW
+MUFA	7	-0.025358408	0.119175184	0.831496522	small cell carcinoma	IVW
+MUFA	7	0.072590021	0.078215686	0.353368675	squamous cell carcinoma	IVW
+methionine	1	-0.064539624	0.178640464	0.717888481	adenocarcinoma	IVW
+methionine	1	0.423623695	0.313715256	0.17690548	small cell carcinoma	IVW
+methionine	1	-0.228754162	0.203187812	0.260239093	squamous cell carcinoma	IVW
+Magnesium 	6	0.013152895	0.021720905	0.544819701	adenocarcinoma	IVW
+Magnesium 	6	-0.033473946	0.034691681	0.334595712	small cell carcinoma	IVW
+Magnesium 	6	0.002320803	0.039540644	0.953195755	squamous cell carcinoma	IVW
+kynurenine	4	-0.046153011	0.055232491	0.403372414	adenocarcinoma	IVW
+kynurenine	4	-0.056794736	0.1326774	0.668602781	small cell carcinoma	IVW
+kynurenine	4	-0.015396351	0.067329143	0.819123151	squamous cell carcinoma	IVW
+Iron 	2	-0.197057046	0.108386821	0.069050307	adenocarcinoma	IVW
+Iron 	2	0.001949196	0.218077844	0.992868543	small cell carcinoma	IVW
+Iron 	2	-0.105079496	0.123952429	0.396582499	squamous cell carcinoma	IVW
+Homocysteine 	12	0.122858351	0.105997308	0.246427456	adenocarcinoma	IVW
+Homocysteine 	12	-0.186488425	0.202932191	0.358111702	small cell carcinoma	IVW
+Homocysteine 	12	0.026372687	0.135821177	0.846041109	squamous cell carcinoma	IVW
+hip circumference 	52	0.097679647	0.118723961	0.410652532	adenocarcinoma	IVW
+hip circumference 	52	0.287639398	0.184313001	0.118617482	small cell carcinoma	IVW
+hip circumference 	52	0.232178195	0.165161257	0.159793414	squamous cell carcinoma	IVW
+height 	607	0.070826041	0.0322254	0.027961022	adenocarcinoma	IVW
+height 	599	-0.057942366	0.053228875	0.276351754	small cell carcinoma	IVW
+height 	607	0.002348824	0.034608192	0.945889906	squamous cell carcinoma	IVW
+HDL cholesterol 	121	-0.00095645	0.042550975	0.982066857	adenocarcinoma	IVW
+HDL cholesterol 	121	0.026490259	0.085490957	0.756667149	small cell carcinoma	IVW
+HDL cholesterol 	121	0.04049022	0.051483389	0.431591291	squamous cell carcinoma	IVW
+FEV 	4	0.155190913	0.419127618	0.711180382	adenocarcinoma	IVW
+FEV 	4	-0.386024004	0.652369875	0.554034302	small cell carcinoma	IVW
+FEV 	4	-0.450868572	0.777983795	0.562228469	squamous cell carcinoma	IVW
+fasting glucose	37	0.07319504	0.090648901	0.419403551	adenocarcinoma	IVW
+fasting glucose	35	0.006990738	0.199211467	0.972006346	small cell carcinoma	IVW
+fasting glucose	37	0.22253486	0.094179057	0.018132995	squamous cell carcinoma	IVW
+CRP	2	-0.098886947	0.101465771	0.329766505	adenocarcinoma	IVW
+CRP	2	0.053578816	0.181581645	0.767942423	small cell carcinoma	IVW
+CRP	2	0.309354449	0.116336908	0.007834375	squamous cell carcinoma	IVW
+Coffee	5	0.073067059	0.246317691	0.766743294	adenocarcinoma	IVW
+Coffee	5	0.831454955	0.505192334	0.099801105	small cell carcinoma	IVW
+Coffee	5	0.315412115	0.364741419	0.387173051	squamous cell carcinoma	IVW
+Chronic bronchitis and chronic obstructive pulmonary disease	2	0.030832997	0.041382703	0.456229596	adenocarcinoma	IVW
+Chronic bronchitis and chronic obstructive pulmonary disease	2	0.007732541	0.298748142	0.979350545	small cell carcinoma	IVW
+Chronic bronchitis and chronic obstructive pulmonary disease	2	-0.151828523	0.047901414	0.001526467	squamous cell carcinoma	IVW
+Calcium	8	-0.098742811	0.110585888	0.371907474	adenocarcinoma	IVW
+Calcium	8	0.25421796	0.22588108	0.260398209	small cell carcinoma	IVW
+Calcium	8	-0.046103589	0.158513517	0.771166371	squamous cell carcinoma	IVW
+Caffeine	2	-0.052840937	0.098179005	0.590431975	adenocarcinoma	IVW
+Caffeine	2	0.330304138	0.175457519	0.059764018	small cell carcinoma	IVW
+Caffeine	2	0.057308356	0.112451249	0.610311787	squamous cell carcinoma	IVW
+body mass index	90	-0.062384986	0.081751397	0.445400151	adenocarcinoma	IVW
+body mass index	90	0.403976011	0.149032995	0.006715184	small cell carcinoma	IVW
+body mass index	90	0.188051942	0.10464621	0.072331521	squamous cell carcinoma	IVW
+Birth weight	7	0.007223187	0.131296179	0.956126953	adenocarcinoma	IVW
+Birth weight	7	0.059441879	0.37876918	0.875296622	small cell carcinoma	IVW
+Birth weight	7	0.081822109	0.150611024	0.586945483	squamous cell carcinoma	IVW
+Bilirubin 	2	-0.003161977	0.029425776	0.91442722	adenocarcinoma	IVW
+Bilirubin 	2	-0.078322402	0.057378859	0.172251624	small cell carcinoma	IVW
+Bilirubin 	2	-0.012066272	0.033729389	0.720539653	squamous cell carcinoma	IVW
+Beta-Carotene 	1	-0.078480302	0.072175685	0.276881724	adenocarcinoma	IVW
+Beta-Carotene 	1	0.149215367	0.1294068	0.248880804	small cell carcinoma	IVW
+Beta-Carotene 	1	0.063863312	0.082920992	0.441198684	squamous cell carcinoma	IVW
+asthma	8	-0.00775882	0.042631712	0.855585521	adenocarcinoma	IVW
+asthma	7	-0.045453192	0.128937396	0.72444727	small cell carcinoma	IVW
+asthma	8	-0.14391842	0.091901659	0.117347543	squamous cell carcinoma	IVW
+Alpha-tocopherol 	1	0.099828563	0.120793272	0.408553733	adenocarcinoma	IVW
+Alpha-tocopherol 	1	-0.08275429	0.2174456	0.703518871	small cell carcinoma	IVW
+Alpha-tocopherol 	1	0.145811158	0.137718884	0.289709382	squamous cell carcinoma	IVW
+2hr glucose	7	0.041695583	0.123047931	0.734717884	adenocarcinoma	IVW
+2hr glucose	7	0.018911366	0.276401347	0.945451342	small cell carcinoma	IVW
+2hr glucose	7	0.012349425	0.119588231	0.917751682	squamous cell carcinoma	IVW
+ 	35	0.130714517	0.198769781	0.510783848	squamous cell carcinoma	IVW

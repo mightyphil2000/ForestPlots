@@ -1,0 +1,11 @@
+id.outcome	exposure	outcome	id.exposure	samplesize	SNP	b	se	pval	method	nsnp	Q	Q_df	Q_pval	cat	ncase	ncontrol	pmid	subcat	trait_strict
+44	ADCY5_fastingGlucose	coronary artery disease || Cardiogramplusc4d || 2013	Rh63NM	NA	NA	-0.277608696	0.582608696	0.633723523	Wald ratio	1	NA	NA	NA	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	ADRA2A_fastingGlucose	coronary artery disease || Cardiogramplusc4d || 2013	yGboZR	NA	NA	0.405	0.582777778	0.48708816	Wald ratio	1	NA	NA	NA	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	ADRA2A_gluc_eqtl	coronary artery disease || Cardiogramplusc4d || 2013	O5mHVm	NA	NA	0.005433119	0.021494775	0.800450115	Wald ratio	1	NA	NA	NA	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	BMI	coronary artery disease || Cardiogramplusc4d || 2013	n9Sgm0	NA	NA	0.364770241	0.058143165	5.68E-09	Maximum likelihood	93	126.6054604	92	0.00977331	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	fastingGlucose	coronary artery disease || Cardiogramplusc4d || 2013	76Z1hK	NA	NA	0.122436438	0.089609794	0.089553432	Maximum likelihood	43	58.91595261	42	0.04324272	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	MAP2K5_BMI	coronary artery disease || Cardiogramplusc4d || 2013	ZSbXVn	NA	NA	0.146743421	0.422105263	0.728105673	Wald ratio	1	NA	NA	NA	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	MAP2K5_bmi_eqtl	coronary artery disease || Cardiogramplusc4d || 2013	5y5AFY	NA	NA	0.023082069	0.015665712	0.189803266	Maximum likelihood	2	0.000393063	1	0.984182333	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	MC4R_BMI	coronary artery disease || Cardiogramplusc4d || 2013	6RTcYW	NA	NA	0.583863163	0.187132688	0.098728106	Maximum likelihood	2	0.033651189	1	0.854450749	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	MTNR1B_fastingGlucose	coronary artery disease || Cardiogramplusc4d || 2013	KjEkaO	NA	NA	-0.234179487	0.17124359	0.171461544	Wald ratio	1	NA	NA	NA	disease	63746	130681	23202125	cardiovascular	coronary artery disease
+44	SLC30A8_fastingGlucose	coronary artery disease || Cardiogramplusc4d || 2013	4bXswY	NA	NA	0.470137931	0.411172414	0.252869128	Wald ratio	1	NA	NA	NA	disease	63746	130681	23202125	cardiovascular	coronary artery disease
