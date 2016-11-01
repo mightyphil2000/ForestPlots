@@ -1,5 +1,5 @@
 ##### Begin one_exp_many_out()
-many_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", exposure_Name="snps.test", outcome_Name="effect.estimate",forest_Title = 'Effect', outfile_Name = 'annot_FP.pdf', left_Col_Names=c("outcome", "snps.test", "chr.names"), left_Col_Titles = c("Outcome", "SNP", "Chr"), right_Col_Names = NULL, right_Col_Titles = NULL, log_ES = FALSE, exp_ES = FALSE, se_Col = "se.outcome", ub_Col =  NULL, lb_Col = NULL, summary_List = c("Inverse variance weighted"), weight = TRUE, volcano = FALSE, sort_at_All = FALSE, N_Breaks = 9) {
+many_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", exposure_Name="snps.test", outcome_Name="effect.estimate",forest_Title = 'Effect', outfile_Name = 'annot_FP.pdf', left_Col_Names=c("outcome", "snps.test", "chr.names"), left_Col_Titles = c("Outcome", "SNP", "Chr"), right_Col_Names = NULL, right_Col_Titles = NULL, log_ES = FALSE, exp_ES = FALSE, se_Col = "se.outcome", ub_Col =  NULL, lb_Col = NULL, summary_List = c("Inverse variance weighted"), weight = TRUE, volcano = FALSE, sort_at_All = FALSE, Labels=NULL) {
   
   library(grid)
   library(ggplot2)
@@ -56,7 +56,7 @@ many_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", expo
     
   } else {
     ## Make the forest plot
-    fo1  <- makeforest( data_Fm = expand_data, eff_col = eff_Col, lb_col = lb_Col, ub_col = ub_Col, log_ES = log_ES, title_text = forest_Title, exp_ES = exp_ES, se_col = se_Col, se_Weight = weight, colour_col = exposure_Name, n_Breaks = N_Breaks)
+    fo1  <- makeforest( data_Fm = expand_data, eff_col = eff_Col, lb_col = lb_Col, ub_col = ub_Col, log_ES = log_ES, title_text = forest_Title, exp_ES = exp_ES, se_col = se_Col, se_Weight = weight, colour_col = exposure_Name,Labels=Labels)
     
     ## Construct left-hand-side annotations
     left <- anot_side( data_Fm = expand_data, col_names = left_Col_Names, title_list = left_Col_Titles, notitles = FALSE, content_Name = outcome_Name)

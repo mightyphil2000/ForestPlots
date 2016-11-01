@@ -142,9 +142,8 @@ anot_side <- function(data_Fm, col_names, title_list = '', notitles = FALSE, con
     return(output)
 }
 
-
 ### 4. Generate a properly-spaced forest plot (without a summary effect) for all studies
-makeforest <- function(data_Fm, eff_col, lb_col, ub_col, se_col, title_text = '', log_ES = FALSE, exp_ES = FALSE, se_Weight = FALSE, colour_col=NULL, n_Breaks = 9) {
+makeforest <- function(data_Fm, eff_col, lb_col, ub_col, se_col, title_text = '', log_ES = FALSE, exp_ES = FALSE, se_Weight = FALSE, colour_col=NULL, Labels=NULL,Breaks=Labels) { 
     # data_Fm = (name) spaced data frame (must be from output from space_Out()) containing meta-analytic data and appropriate annotation, spacing cols etc
     # space_col = (character) column name giving the column listing spacing of effects in the forest plot
     # eff_col = (character) column name of effect-size column
@@ -154,7 +153,7 @@ makeforest <- function(data_Fm, eff_col, lb_col, ub_col, se_col, title_text = ''
     # log_ES = (logical) convert effect sizes TO natural log scale y/n?
     # exp_ES = (logical) convert effect sizes FROM natural log scale y/n?
     # summary_rows = (integer) vector listing rows with summaries in them
-    
+
     
     if (nchar(title_text) <= 1) {
         title_text <- eff_col
@@ -189,19 +188,26 @@ makeforest <- function(data_Fm, eff_col, lb_col, ub_col, se_col, title_text = ''
     # ggplot code to generate the forest plot using geom_segments and geom_points and to make a relatively minimal theme
     raw_forest  <- ggplot(data = data_Fm, aes( y = spacing_vec, yend = spacing_vec, x = as.numeric(lb_col), xend = as.numeric(ub_col) )) + geom_segment()  + geom_point(aes( y = spacing_vec,  x = as.numeric(eff_col), size = (se_col)^(-2 * as.numeric(se_Weight)), colour = colour_col), shape = 15) + scale_size_continuous(range = c(1.25, 8.5))  + theme_bw() + theme( axis.text.y = element_blank(), axis.ticks.y = element_blank(), axis.title = element_blank(), panel.grid = element_blank(), panel.border = element_blank(),axis.line=element_line(), axis.line.y=element_blank(), title = element_text(size = 20), legend.position = 'none', axis.line.x = element_line(size = 1)) + expand_limits(y = c(data_Fm[,'spacing_vec'] - 1, data_Fm[,'spacing_vec'] + 2),x = c(min(as.numeric(lb_col),na.rm = TRUE), max(as.numeric(ub_col), na.rm = TRUE))) + labs(title = title_text) # returns ggplot2 object with the (un-annotated) forest plot
         
-    if (exp_ES == TRUE) { 
-        Limits<-c(min(as.numeric(data_Fm$lb_col),na.rm=T),max(as.numeric(data_Fm$ub_col),na.rm=T))
-        # log(Limits[2])-log(Limits[1])
-        From=log(Limits[1])
-        To=log(Limits[2])
-        Breaks<-seq(From,To,length.out=10 )
-            # by=0.6931472)
-        # raw_forest <- raw_forest  + scale_x_continuous(trans = log2_trans(),limits=c(min(as.numeric(lb_col)),max(as.numeric(ub_col))), breaks = scales::pretty_breaks(n = n_Breaks)) + geom_vline(xintercept = 1) 
-         raw_forest <- raw_forest  + scale_x_continuous(trans = log2_trans(),breaks=Breaks) + geom_vline(xintercept = 1) 
+    if (exp_ES == TRUE) {
+       # Breaks=c(0.12,0.25,0.5,1.0,2.0,4.0,8.0,16,32,64)
+       # Labels=c(0.12,0.25,0.5,1.0,2.0,4.0,8.0,16,32,64)
+
+        if(is.null(Labels)){
+            Breaks=c(min(as.numeric(data_Fm$lb_col),na.rm=T),1,max(as.numeric(data_Fm$ub_col),na.rm=T))
+            Labels=c(round(min(as.numeric(data_Fm$lb_col),na.rm=T),2),1.00,round(max(as.numeric(data_Fm$ub_col),na.rm=T),2))
+        }
+        raw_forest <- raw_forest  + scale_x_continuous(trans = log2_trans(),breaks=Breaks,labels=Labels)  + geom_vline(xintercept = 1)     
+
     } else {
+
+        if(is.null(Labels)){
+            Breaks=c(min(as.numeric(data_Fm$lb_col),na.rm=T),0,max(as.numeric(data_Fm$ub_col),na.rm=T))
+            Labels=c(round(min(as.numeric(data_Fm$lb_col),na.rm=T),2),0,round(max(as.numeric(data_Fm$ub_col),na.rm=T),2))
+        }
         # raw_forest <- raw_forest + geom_vline(xintercept = 0) + scale_x_continuous(limits=c(min(as.numeric(lb_col)),max(as.numeric(ub_col))),breaks = scales::pretty_breaks(n = n_Breaks))
-                raw_forest <- raw_forest + geom_vline(xintercept = 0) + scale_x_continuous(breaks=Breaks)
+         raw_forest <- raw_forest + geom_vline(xintercept = 0) + scale_x_continuous(breaks=Breaks,labels=Labels)
     }
+    
     
     if(length(unique(data_Fm$colour_col)) == 1){
       raw_forest <- raw_forest + scale_colour_grey(start = 0)
@@ -209,6 +215,7 @@ makeforest <- function(data_Fm, eff_col, lb_col, ub_col, se_col, title_text = ''
     
     return(raw_forest)
 }
+
 
 ###### END Shared Helper Functions
 
