@@ -61,16 +61,18 @@ Res<-memodata[memodata$subtype=="adenocarcinoma",]
 # memodata<-memodata[order(memodata$Phenotype,decreasing=T),]
 
 memotestplot <- many_exp_many_out(inpt_Df = memodata, eff_Col = "Beta", 
-	se_Col = "SE", ub_Col = NULL, lb_Col = NULL, exposure_Name = "subtype", 
-	outcome_Name = "subcat",forest_Title = 'Effect size in log units, presented as a 95% confidence interval', 
-	outfile_Name = "~/Google Drive/MR_base/papers/lung_cancer/plots/annot_memo.png", 
+	se_Col = "SE", ub_Col = NULL, lb_Col = NULL, 
+	exposure_Name = "subtype", # the results are coloured by this variable, e.g. the lung cancer subtypes 
+	outcome_Name = "subcat", # this stratifies the results by phenotype subcategory, e.g. anthropometric , glycemic, etc
+	forest_Title = 'Effect size in log units, presented as a 95% confidence interval', 
+	outfile_Name = "annot_memo.png", 
 	left_Col_Names = c("Phenotype","subtype"), 
 	left_Col_Titles = c("",""), 
 	right_Col_Names = NULL, 
 	right_Col_Titles = NULL, 
 	log_ES = FALSE, 
-	exp_ES = TRUE, 
-	summary_List = c('IVW'), 
-	weight = TRUE,
-	sort_at_All=FALSE,
-	Labels=c(0.06,0.12,0.25,0.5,1.0,2.0,4.0,8.0,16,32,64))
+	exp_ES = TRUE, #exponentiate log odds ratio
+	summary_List = c('IVW'), #name of method
+	weight = TRUE, #weight the effect sizes by the inverse of the variance of the log odds ratio
+	sort_at_All=FALSE, #when FALSE uses the order in the data; TRUE means automatically sort the data by effect size 
+	Labels=c(0.06,0.12,0.25,0.5,1.0,2.0,4.0,8.0,16,32,64)) #labels for the x axis
