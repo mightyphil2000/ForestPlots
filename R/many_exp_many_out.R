@@ -7,7 +7,7 @@ many_exp_many_out <- function( inpt_Df = NULL , eff_Col = "effect.outcome", expo
   library(reshape2)
   library(scales)
   
-  source("./forest_plots_helper_functions.R")
+  # source("./forest_plots_helper_functions.R")
   # inpt_Df = (character) filename of the data
   # eff_Col = (character) character giving the MR effect column
   # exposure_Name = (character) name of the SNP Name/Summary Name column
