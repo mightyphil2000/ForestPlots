@@ -271,7 +271,15 @@ output_forestplot <- function(forest, left, right, outfile_Name, nrows, ncols, p
     widthSpec <- switch(typeSpec$spec[match(plotType,typeSpec$type)], 6500 + 480*(ncols%%30), 6000 + 480*(ncols%%30), 6500 + 480*(ncols%%30), 6500 + 480*(ncols%%30), 6500 + 480*(ncols%%30))
     heightSpec <- switch(typeSpec$spec[match(plotType,typeSpec$type)],3000+ 250*(nrows%%13), 3000+ 250*(nrows%%13), 6000+ 500*(nrows%%13), 3000+ 125*(nrows%%13), 6500 + 480*(ncols%%30))
     if(length(outfile_Name) > 0 ){
-        png(file = outfile_Name,width = widthSpec, height = heightSpec, res = 300)
+        
+        prename <- unlist(strsplit(x = outfile_Name, split = ".", fixed = TRUE))
+        plotype <- prename[length(prename)]
+        switch(plotype,
+               png = png(filename = outfile_Name, width = widthSpec, height = heightSpec, res = 300),
+               jpg = jpeg(filename = outfile_Name, width = widthSpec, height = heightSpec, res = 300),
+               tiff = tiff(filename = outfile_Name, width = widthSpec, height = heightSpec, res = 300),
+               pdf = pdf(file = outfile_Name, width = widthSpec/300, height = heightSpec/300, pointsize = 12),
+               wmf = win.metafile(filename = outfile_Name, width = widthSpec/300, height = heightSpec/300, pointsize = 12))
         grid.newpage()
         grid.draw(group)
         dev.off()
