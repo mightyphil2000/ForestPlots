@@ -201,8 +201,9 @@ makeforest <- function(data_Fm, eff_col, lb_col, ub_col, se_col, title_text = ''
     } else {
 
         if(is.null(Labels)){
-            Breaks=c(min(as.numeric(data_Fm$lb_col),na.rm=T),0,max(as.numeric(data_Fm$ub_col),na.rm=T))
-            Labels=c(round(min(as.numeric(data_Fm$lb_col),na.rm=T),2),0,round(max(as.numeric(data_Fm$ub_col),na.rm=T),2))
+            breakrange <- diff(range(c(min(as.numeric(data_Fm$lb_col),na.rm=T),0,max(as.numeric(data_Fm$ub_col),na.rm=T)))) ## Range of values taken
+            Breaks=c(min(as.numeric(data_Fm$lb_col),na.rm=T), min(as.numeric(data_Fm$lb_col),na.rm=T) + c(0.125, 0.25, 0.5, 0.67)*breakrange,0,max(as.numeric(data_Fm$ub_col),na.rm=T)) ## example code to have ticks based on fractions of the range btw the minimum LB and the max UB
+            Labels=round(Breaks, 2)
         }
         # raw_forest <- raw_forest + geom_vline(xintercept = 0) + scale_x_continuous(limits=c(min(as.numeric(lb_col)),max(as.numeric(ub_col))),breaks = scales::pretty_breaks(n = n_Breaks))
          raw_forest <- raw_forest + geom_vline(xintercept = 0) + scale_x_continuous(breaks=Breaks,labels=Labels)
